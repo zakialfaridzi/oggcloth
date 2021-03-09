@@ -24,7 +24,7 @@ const CheckOutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
           &#10095;
         </div>
       </span>
-      <span className="price">Rp {price}</span>
+      <span className="price">Rp {price * 1000}</span>
       <div className="remove-button" onClick={() => clearItem(cartItem)}>
         &#10005;
       </div>

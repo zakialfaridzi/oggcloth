@@ -32,10 +32,10 @@ const CheckOut = ({ cartItems, total }) => (
       <CheckOutItem cartItem={cartItem} key={cartItem.id} />
     ))}
     <div className="total">
-      <span>TOTAL: Rp {total}</span>
+      <span>TOTAL: Rp {total * 1000}</span>
     </div>
     <div className="test-warning">
-      *Please use the following test credit card for payments*
+      *Please use this test credit card for payments with Stripe*
       <br />
       4242 4242 4242 4242 - Exp: 05/21 - CVV: 123
     </div>

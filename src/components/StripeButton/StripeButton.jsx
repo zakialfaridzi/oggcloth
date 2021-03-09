@@ -3,7 +3,7 @@ import StripeCheckout from "react-stripe-checkout";
 import img from "../../assets/og1.png";
 
 const StripeButton = ({ price }) => {
-  const priceForStripe = price * 100;
+  const priceForStripe = price * 1000;
   const publishableKey =
     "pk_test_51ISaNGE0aB2emuByfQRJPBxp56roTvSo54bvMSjna5hQbONDLCLklE32y02U4EZjKuGz2eEiPbmmQGIzoJtLaEo300c6WfwHIR";
 
@@ -19,13 +19,14 @@ const StripeButton = ({ price }) => {
       billingAddress
       shippingAddress
       image={img}
-      description={`Your total is $${price}`}
+      description={`Your total is Rp ${price * 1000}`}
       amount={priceForStripe}
       panelLabel="Give Money"
       token={onToken}
       //   opened={onOpened}
       //   closed={onClosed}
       stripeKey={publishableKey}
+      currency="IDR"
     />
   );
 };
